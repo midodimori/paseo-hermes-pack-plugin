@@ -1,0 +1,7 @@
+name: paseo-delivery
+label: Paseo findings
+kind: platform
+version: "2.2.0"
+provides_hooks:
+  - pre_llm_call
+description: Publish assistant findings, supply reply context, apply conversation reasoning, and expose native skill/cron command helpers.

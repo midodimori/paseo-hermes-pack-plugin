@@ -1,0 +1,18 @@
+name: hermes-pack
+version: "1.24.0"
+description: Personal assistant with native memory, a personal diary, contextual initiative, and Paseo delegation.
+hermes_requires: ">=0.21.2"
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - proton-cli.yaml
+  - templates/USER.md
+  - scripts/seed-user.py
+  - scripts/seed-cron.py
+  - skills/review-context
+  - skills/maintain-memory
+  - skills/maintain-pack
+  - skills/diary-note
+  - skills/diary-search
+  - skills/diary-forget
+  - plugins/paseo-delivery

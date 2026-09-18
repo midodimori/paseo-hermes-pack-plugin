@@ -1,0 +1,20 @@
+{
+  "profile": "assistant",
+  "agent_name": "Assistant",
+  "settings": {
+    "agent.reasoning_effort": "max",
+    "web.search_backend": "ddgs",
+    "web.extract_backend": "exa"
+  },
+  "setup": {
+    "pack_location": true,
+    "builtin_skills": true,
+    "web_search": false,
+    "browser": false,
+    "paseo": false,
+    "seed_user": false,
+    "seed_cron": false
+  },
+  "delivery": "local",
+  "gateway": "preserve"
+}

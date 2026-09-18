@@ -1,0 +1,9 @@
+confirm:
+  deny:
+    "*": mutations
+    account login: default
+    account logout: default
+    account sessions revoke: default
+    drive: all
+    pass: all
+    contacts: all

@@ -1,0 +1,20 @@
+model:
+  default: gpt-5.6-luna
+  provider: openai-codex
+agent:
+  reasoning_effort: max
+skills:
+  create_dir: skills/learned
+plugins:
+  enabled:
+    - paseo-delivery
+web:
+  search_backend: ddgs
+  extract_backend: exa
+  provider_tier:
+    exa: free
+browser:
+  cloud_provider: local
+auxiliary:
+  vision:
+    provider: main

@@ -1,0 +1,16 @@
+{
+  "name": "paseo-hermes-pack-plugin",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check": "check_dir=$(mktemp -d /tmp/hermes-paseo-check.XXXXXX); trap 'rm -rf \"$check_dir\"' EXIT; ln -s \"$PWD/node_modules\" \"$check_dir/node_modules\"; tsc --noEmit false --rewriteRelativeImportExtensions --outDir \"$check_dir\" && cp package.json \"$check_dir/\" && HERMES_PACK_SOURCE=\"${HERMES_PACK_SOURCE:-$(pwd)/hermes}\" node \"$check_dir/tests/check.js\" && HERMES_PACK_SOURCE=\"${HERMES_PACK_SOURCE:-$(pwd)/hermes}\" node \"$check_dir/tests/check_commands.js\""
+  },
+  "devDependencies": {
+    "@getpaseo/plugin": "0.8.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  },
+  "version": "1.2.0",
+  "description": "Hermes Pack providers, model controls, commands, and direct scheduled findings for Paseo."
+}

@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+"""Run the pack's installation, update, or removal command."""
+from pathlib import Path
+import os
+import shutil
+import sys
+
+repo = Path(__file__).resolve().parent
+uv = shutil.which("uv", path=str(Path.home() / ".local/bin") + os.pathsep + os.environ.get("PATH", ""))
+if not uv:
+    sys.exit("Install uv: https://docs.astral.sh/uv/getting-started/installation/\n"
+             "Or use Python-only prompts: python3 install.py install --plain")
+env = {k: v for k, v in os.environ.items() if k not in ("PYTHONPATH", "PYTHONHOME", "VIRTUAL_ENV", "UV_PROJECT_ENVIRONMENT")}
+os.execve(uv, [uv, "run", "--isolated", "--locked", "--project", str(repo), "--", "python", str(repo / "install.py"), *sys.argv[1:]], env)
