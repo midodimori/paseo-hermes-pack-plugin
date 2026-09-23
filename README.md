@@ -4,7 +4,7 @@ A personal assistant package with a native Hermes profile, character, memory and
 
 ## Install
 
-Run on the host where the assistant will stay available. Install [Hermes](https://hermes-agent.nousresearch.com/docs/getting-started/installation), [Paseo](https://paseo.sh), and [uv](https://docs.astral.sh/uv/getting-started/installation/) first. The package requires Hermes 0.21.2+, Paseo 0.8.x, Python 3.10+, and Node.js. Hermes must be available at `~/.local/bin/hermes`, with profiles under `~/.hermes`. Paseo needs its CLI and a running local daemon.
+Run on the host where the assistant will stay available. Install [Hermes](https://hermes-agent.nousresearch.com/docs/getting-started/installation), [Paseo](https://paseo.sh), and [uv](https://docs.astral.sh/uv/getting-started/installation/) first. The package requires Hermes 0.21.2+, Paseo with plugin support, Python 3.10+, and Node.js. Hermes must be available at `~/.local/bin/hermes`, with profiles under `~/.hermes`. Paseo needs its CLI and a running local daemon.
 
 ```sh
 git clone https://github.com/midodimori/paseo-hermes-pack-plugin.git
